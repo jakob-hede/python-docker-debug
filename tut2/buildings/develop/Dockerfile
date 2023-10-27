@@ -34,7 +34,9 @@ ENV APP_DIR=$APP_DIR_ARG
 #ENV APP_DIR /app
 #ENV PY_SRC_DIR=/app/lode
 # Install pip requirements
-COPY requirements.develop.txt ./requirements.txt
+#COPY requirements.develop.txt ./requirements.txt
+COPY ./buildings/develop/requirements.develop.txt ./requirements.txt
+
 #RUN python3 -m pip install --upgrade pip && python3 -m pip install -r requirements.txt
 #RUN python3 -m pip install --upgrade pip
 RUN python3 -m pip install -r requirements.txt

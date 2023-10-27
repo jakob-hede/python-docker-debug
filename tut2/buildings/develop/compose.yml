@@ -2,23 +2,24 @@ version: '3.4'
 
 services:
   tut2:
-    environment:
-      - VAR2=compose
-    #    env_file:
-    #      - .env
-    container_name: tut2
+    env_file:
+      - .env
+    container_name: ${IMAGE_NAME}
     image: ${IMAGE_NAME}
     build:
-      context: .
-      dockerfile: ./Dockerfile
+      context: ../../
+      dockerfile: ./buildings/develop/Dockerfile
       args:
-#        - DO_DEBUG_ARG=${DO_DEBUG}
         - USER_ID_ARG=${USER_ID}
         - USER_NAME_ARG=${USER_NAME}
         - APP_DIR_ARG=${APP_DIR}
-#        - PY_SRC_NAME_ARG=${PY_SRC_NAME}
     ports:
       - "5678:5678"
     volumes:
-#      - ./buggy:/opt/buggy
       - /home/sermin/docker_sermin/docker_python/tut2/lode:/app/lode
+
+#        - DO_DEBUG_ARG=${DO_DEBUG}
+#        - PY_SRC_NAME_ARG=${PY_SRC_NAME}
+#      - ./buggy:/opt/buggy
+#    environment:
+#      - VAR2=compose

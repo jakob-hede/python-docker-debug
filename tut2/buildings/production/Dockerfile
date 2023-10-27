@@ -19,7 +19,7 @@ ENV USER_NAME=${USER_NAME_ARG}
 ENV APP_DIR=${APP_DIR_ARG}
 
 # Install pip requirements
-COPY requirements.txt .
+COPY ./buildings/production/requirements.production.txt ./requirements.txt
 #RUN python3 -m pip install --upgrade pip && python3 -m pip install -r requirements.txt
 #RUN python3 -m pip install --upgrade pip
 RUN python3 -m pip install -r requirements.txt

@@ -1,0 +1,29 @@
+version: '3.4'
+
+services:
+  tut2:
+#    environment:
+#      - VAR2=compose
+
+#    env_file: /home/sermin/docker_sermin/docker_python/tut2/.env
+    # "../.env"
+    env_file: .env
+
+    container_name: ${IMAGE_NAME}
+    image: ${IMAGE_NAME}
+    build:
+      context: ../
+      dockerfile: ./production/Dockerfile
+      args:
+        - USER_ID_ARG=${USER_ID}
+        - USER_NAME_ARG=${USER_NAME}
+        - APP_DIR_ARG=${APP_DIR}
+
+
+
+
+#        - NADA_ARG=${NADA}
+#    ports:
+#      - "5678:5678"
+#    volumes:
+#      - /home/sermin/docker_sermin/docker_python/tut2/lode:/app/lode

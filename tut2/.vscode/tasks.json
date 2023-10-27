@@ -1,0 +1,45 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    // {
+    //   "label": "docker-compose-up-debug",
+    //   "type": "docker-compose",
+    //   "dockerCompose": {
+    //     "up": {
+    //       "detached": true,
+    //       "build": true,
+    //       "services": ["tut2"]
+    //     },
+    //     "files": [
+    //       // "${workspaceFolder}/docker-compose.debug.yml"
+    //       "${workspaceFolder}/docker-compose.debug.yml"
+    //     ],
+    //     "envFiles":[
+    //       "${workspaceFolder}/.env"
+    //     ]
+    //   }
+    // },
+    // {
+    //   "label": "docker-compose-down",
+    //   "type": "docker-compose",
+    //   "dockerCompose": {
+    //     "down": {
+    //       "removeImages": "all",
+    //     },
+    //     "files": [
+    //       "${workspaceFolder}/docker-compose.debug.yml"
+    //     ]
+    //   }
+    // },
+    // {
+    //   "type": "docker-run",
+    //   "label": "docker-run: debug",
+    //   "dependsOn": [
+    //     "docker-compose-up-debug"
+    //   ],
+    //   "python": {
+    //     "file": "app.py"
+    //   }
+    // }
+  ]
+}
